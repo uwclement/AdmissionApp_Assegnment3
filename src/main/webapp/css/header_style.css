@@ -1,0 +1,28 @@
+/* Header styles */
+.body{
+    background-color: #0f121c;
+}
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 50px;
+    background-color: #ffffff; /* Adjust as needed */
+    color: #fff; /* Adjust text color as needed */
+}
+
+.header img {
+    width: 40px; /* Adjust image width as needed */
+    height: auto; /* Maintain aspect ratio */
+    margin-right: 10px;
+}
+
+.header a {
+    text-decoration: none;
+    color: #fff; /* Adjust link color as needed */
+    margin-left: 10px; /* Adjust spacing between links as needed */
+}
+
+.header a:hover {
+    text-decoration: underline;
+}
