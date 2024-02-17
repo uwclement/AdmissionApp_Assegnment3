@@ -23,7 +23,7 @@
 
     <div class="header2"><img src="images/view2.png" alt=""> <%=request.getParameter("name")%></div>
     <div class="header1">Registration Form</div>
-    <div class="header3" >Register <%=request.getParameter("loginCookie")%></div>
+    <div class="header3" >Register </div>
     <form action="#">
 <%--        <div class="form first">--%>
 
@@ -65,46 +65,50 @@
                 </div>
             </div>
 
-            <div class="details family">
-                <span class="title">Family Details</span>
+<%--            <div class="details family">--%>
+<%--                <span class="title">Family Details</span>--%>
 
-                <div class="fields">
-                    <div class="input-field">
-                        <label>Father Name</label>
-                        <input type="text" placeholder="Enter father name" required>
-                    </div>
+<%--                <div class="fields">--%>
+<%--                    <div class="input-field">--%>
+<%--                        <label>Father Name</label>--%>
+<%--                        <input type="text" placeholder="Enter father name" required>--%>
+<%--                    </div>--%>
 
-                    <div class="input-field">
-                        <label>Mother Name</label>
-                        <input type="text" placeholder="Enter mother name" required>
-                    </div>
+<%--                    <div class="input-field">--%>
+<%--                        <label>Mother Name</label>--%>
+<%--                        <input type="text" placeholder="Enter mother name" required>--%>
+<%--                    </div>--%>
 
-                    <div class="input-field">
-                        <label>Grandfather</label>
-                        <input type="text" placeholder="Enter grandfther name" required>
-                    </div>
+<%--                    <div class="input-field">--%>
+<%--                        <label>Grandfather</label>--%>
+<%--                        <input type="text" placeholder="Enter grandfther name" required>--%>
+<%--                    </div>--%>
 
-                    <div class="input-field">
-                        <label>Spouse Name</label>
-                        <input type="text" placeholder="Enter spouse name" required>
-                    </div>
+<%--                    <div class="input-field">--%>
+<%--                        <label>Spouse Name</label>--%>
+<%--                        <input type="text" placeholder="Enter spouse name" required>--%>
+<%--                    </div>--%>
 
-                    <div class="input-field">
-                        <label>Father in Law</label>
-                        <input type="text" placeholder="Father in law name" required>
-                    </div>
+<%--                    <div class="input-field">--%>
+<%--                        <label>Father in Law</label>--%>
+<%--                        <input type="text" placeholder="Father in law name" required>--%>
+<%--                    </div>--%>
 
-                    <div class="input-field">
-                        <label>Mother in Law</label>
-                        <input type="text" placeholder="Mother in law name" required>
-                    </div>
-                </div>
+<%--                    <div class="input-field">--%>
+<%--                        <label>Mother in Law</label>--%>
+<%--                        <input type="text" placeholder="Mother in law name" required>--%>
+<%--                    </div>--%>
+<%--                </div>--%>
 
-                <div class="buttons">
-                    <div class="backBtn">
-                        <i class="uil uil-navigator" ></i>
-                        <span class="btnText" >Back</span>
-                    </div>
+<%--                <div class="buttons">--%>
+<%--                    <div class="backBtn">--%>
+<%--                        <i class="uil uil-navigator" ></i>--%>
+<%--                        <span class="btnText" >Back</span>--%>
+<%--                    </div>--%>
+
+                    <form action="LogoutServlet" method="post">
+                        <input class="uil uil-navigator" type="submit" value="Logout" >
+                    </form>
 
                     <button class="sumbit">
                         <span class="btnText">Submit</span>
