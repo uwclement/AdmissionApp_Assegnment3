@@ -16,11 +16,11 @@
                 <img src="images/Login.png" alt="IMG">
             </div>
 
-            <form class="login100-form validate-form">
+            <form class="login100-form validate-form" method="get" action="LoginServlet">
 					<span class="login100-form-title">Member Login</span>
 
                 <div class="wrap-input100 validate-input" data-validate = "Valid email is required: ex@abc.xyz" >
-                    <input class="input100" type="text" name="email" placeholder="Email" aria-required="true">
+                    <input class="input100" type="text" name="email" placeholder="Email" aria-required="true" required>
                     <span class="focus-input100"></span>
                     <span class="symbol-input100">
 							<i class="fa fa-envelope" aria-hidden="true"></i>
@@ -28,7 +28,7 @@
                 </div>
 
                 <div class="wrap-input100 validate-input" data-validate = "Password is required">
-                    <input class="input100" type="password" name="pass" placeholder="Password">
+                    <input class="input100" type="password" name="password" placeholder="Password" required>
                     <span class="focus-input100"></span>
                     <span class="symbol-input100">
 							<i class="fa fa-lock" aria-hidden="true"></i>
@@ -36,12 +36,13 @@
                 </div>
 
                 <div class="container-login100-form-btn">
-                    <a href="form.jsp" class="login100-form-btn">Login</a>
+                    <input class="login100-form-btn" type="submit" value="Login" placeholder="Login" />
+<%--                    <a  class="login100-form-btn">Login</a>--%>
                 </div>
 
 
                 <div class="text-center p-t-136">
-                    <a class="txt2" href="signup.jsp">Create your Account!!!
+                    <a class="txt2" href="signup.jsp" >Create your Account!!!
                         <i class="fa fa-long-arrow-right m-l-5" aria-hidden="true"></i>
                     </a>
                 </div>

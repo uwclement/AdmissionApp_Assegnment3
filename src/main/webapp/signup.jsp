@@ -18,7 +18,7 @@
                 <img src="images/sigup.png" alt="IMG">
             </div>
 
-            <form class="login100-form validate-form">
+            <form class="login100-form validate-form" method="post" action="session" >
 					<span class="register100-form-title">Member Register</span>
 
                 <div class="wrap-input100 validate-input" data-validate = "Valid name is required">
@@ -57,7 +57,7 @@
                 </div>
 
                 <div class="text-center p-t-136">
-                    <a class="txt2" href="index.jsp">Login To Your Account!!!
+                    <a class="txt2" href="Login.jsp">Login To Your Account!!!
                         <i class="fa fa-long-arrow-right m-l-5" aria-hidden="true"></i>
                     </a>
                 </div>

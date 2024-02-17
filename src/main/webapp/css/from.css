@@ -6,13 +6,13 @@
     box-sizing: border-box;
     font-family: 'Poppins', sans-serif;
 }
-/*body{*/
-/*    min-height: 100vh;*/
-/*    display: block;*/
-/*    align-items: center;*/
-/*    justify-content: center;*/
-/*    background: #0f121c;*/
-/*}*/
+body{
+    min-height: 100vh;
+    display: block;
+    align-items: center;
+    justify-content: center;
+    background-color: #0f121c;
+}
 .container{
     position: relative;
     max-width: 1000px;
@@ -21,10 +21,10 @@
     max-height: 700px;
     border-radius: 6px;
     padding: 70px;
-    margin: 70px 15px;
+    margin: 40px 130px;
     background-color: #fff;
     box-shadow: 0 5px 10px rgba(0,0,0,0.1);
-    align-items: center;
+
 }
 .header3{
     position: relative;

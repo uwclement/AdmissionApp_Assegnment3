@@ -11,14 +11,19 @@
 
     <title>Responsive Regisration Form </title>
 </head>
+<style>
+    .body{
+        background-color: #0f121c;
+    }
+</style>
 <body>
 <%--<%@include file="header.jsp"%>--%>
-<jsp:include page="header.jsp"/>
+<%--<jsp:include page="header.jsp"/>--%>
 <div class="container">
 
-    <div class="header2"><img src="images/view2.png" alt="">$$$</div>
+    <div class="header2"><img src="images/view2.png" alt=""> <%=request.getParameter("name")%></div>
     <div class="header1">Registration Form</div>
-    <div class="header3" >Register</div>
+    <div class="header3" >Register <%=request.getParameter("loginCookie")%></div>
     <form action="#">
 <%--        <div class="form first">--%>
 
