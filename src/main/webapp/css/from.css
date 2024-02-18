@@ -49,19 +49,10 @@ body{
     color: #333;
     margin-left: 600px;
 }
-.container header3::before{
-    content: "";
-    position: absolute;
-    left: 0;
-    bottom: -2px;
-    height: 3px;
-    width: 27px;
-    border-radius: 8px;
-    background-color: #4070f4;
-}
+
 .container form{
     position: relative;
-    margin-top: 16px;
+    margin-top: 10px;
     min-height: 490px;
     background-color: #fff;
     overflow: hidden;
@@ -189,3 +180,17 @@ form .buttons button , .backBtn{
         width: 100%;
     }
 }
+
+
+
+/* Header styles */
+
+.headd {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 50px;
+    background-color: #ffffff; /* Adjust as needed */
+    color: #fff; /* Adjust text color as needed */
+}
+

@@ -10,7 +10,6 @@ import static java.lang.System.out;
 /**
  * Servlet implementation class LoginServlet
  */
-//@WebServlet("/LoginServlet")
     @WebServlet("/LoginServlet")
 public class LoginServlet extends HttpServlet {
     private static final long serialVersionUID = 1L;
@@ -31,7 +30,7 @@ public class LoginServlet extends HttpServlet {
             loginCookie.setMaxAge(30*60);
             response.addCookie(loginCookie);
             session.setAttribute("user", user);
-            response.sendRedirect("form.jsp?name=" + user+ loginCookie.getValue());
+            response.sendRedirect("form.jsp?user="+user);
 
             out.println("<script>alert('Valid Email & Passwd');</script>");
 

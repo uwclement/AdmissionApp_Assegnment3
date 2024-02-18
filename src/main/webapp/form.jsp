@@ -17,105 +17,81 @@
     }
 </style>
 <body>
-<%--<%@include file="header.jsp"%>--%>
+<%@include file="header.jsp"%>
 <%--<jsp:include page="header.jsp"/>--%>
 <div class="container">
-
-    <div class="header2"><img src="images/view2.png" alt=""> <%=request.getParameter("name")%></div>
+    <div class="header2"><img src="images/view2.png" alt=""> <%=request.getParameter("user")%></div>
     <div class="header1">Registration Form</div>
-    <div class="header3" >Register </div>
     <form action="#">
 <%--        <div class="form first">--%>
-
-
         <div class="form first">
             <div class="details address">
-                <span class="title">Address Details</span>
+                <span class="title">Details</span>
 
                 <div class="fields">
                     <div class="input-field">
-                        <label>Address Type</label>
-                        <input type="text" placeholder="Permanent or Temporary" required>
+                        <label>Student ID</label>
+                        <input type="number" placeholder=" Enter Student ID" required>
+                    </div>
+                    <div class="input-field">
+                        <label>Full Name</label>
+                        <input type="text" placeholder="Enter Full Name" required>
                     </div>
 
                     <div class="input-field">
-                        <label>Nationality</label>
-                        <input type="text" placeholder="Enter nationality" required>
+                        <label>Gender</label>
+                        <select required>
+                            <option disabled selected>Select gender</option>
+                            <option>Male</option>
+                            <option>Female</option>
+                            <option>Others</option>
+                        </select>
                     </div>
 
                     <div class="input-field">
-                        <label>State</label>
-                        <input type="text" placeholder="Enter your state" required>
+                        <label>Phone Number</label>
+                        <input type="number" placeholder="Enter Phone number" required>
                     </div>
 
                     <div class="input-field">
-                        <label>District</label>
-                        <input type="text" placeholder="Enter your district" required>
+                        <label>Faculty</label>
+                        <select required>
+                            <option disabled selected>Select Faculty</option>
+                            <option>Faculty of Business Administration</option>
+                            <option>Faculty of Information Technology</option>
+                            <option>Faculty of Health Science </option>
+                            <option>Faculty of Education </option>
+                        </select>
                     </div>
 
                     <div class="input-field">
-                        <label>Block Number</label>
-                        <input type="number" placeholder="Enter block number" required>
-                    </div>
-
-                    <div class="input-field">
-                        <label>Ward Number</label>
-                        <input type="number" placeholder="Enter ward number" required>
+                        <label>Course</label>
+                        <input type="Text" placeholder=" Enter Course" required>
                     </div>
                 </div>
+
             </div>
 
-<%--            <div class="details family">--%>
-<%--                <span class="title">Family Details</span>--%>
+            <form action="upload.php" method="post" enctype="multipart/form-data">
+                <!-- Other form fields -->
+                <div class="input-field">
+                <label>Passport</label>
+                <input type="file" name="passport_picture" accept=".jpg, .png" >
+                </div>
+                <div class="input-field">
+                <label>Certificate</label>
+                <input type="file" name="certificate" accept=".pdf" placeholder="Certificate">
+                </div>
 
-<%--                <div class="fields">--%>
-<%--                    <div class="input-field">--%>
-<%--                        <label>Father Name</label>--%>
-<%--                        <input type="text" placeholder="Enter father name" required>--%>
-<%--                    </div>--%>
-
-<%--                    <div class="input-field">--%>
-<%--                        <label>Mother Name</label>--%>
-<%--                        <input type="text" placeholder="Enter mother name" required>--%>
-<%--                    </div>--%>
-
-<%--                    <div class="input-field">--%>
-<%--                        <label>Grandfather</label>--%>
-<%--                        <input type="text" placeholder="Enter grandfther name" required>--%>
-<%--                    </div>--%>
-
-<%--                    <div class="input-field">--%>
-<%--                        <label>Spouse Name</label>--%>
-<%--                        <input type="text" placeholder="Enter spouse name" required>--%>
-<%--                    </div>--%>
-
-<%--                    <div class="input-field">--%>
-<%--                        <label>Father in Law</label>--%>
-<%--                        <input type="text" placeholder="Father in law name" required>--%>
-<%--                    </div>--%>
-
-<%--                    <div class="input-field">--%>
-<%--                        <label>Mother in Law</label>--%>
-<%--                        <input type="text" placeholder="Mother in law name" required>--%>
-<%--                    </div>--%>
-<%--                </div>--%>
-
-<%--                <div class="buttons">--%>
-<%--                    <div class="backBtn">--%>
-<%--                        <i class="uil uil-navigator" ></i>--%>
-<%--                        <span class="btnText" >Back</span>--%>
-<%--                    </div>--%>
-
-                    <form action="LogoutServlet" method="post">
-                        <input class="uil uil-navigator" type="submit" value="Logout" >
-                    </form>
-
+                <div class="buttons">
                     <button class="sumbit">
                         <span class="btnText">Submit</span>
                         <i class="uil uil-navigator"></i>
                     </button>
                 </div>
+            </form>
             </div>
+
         </div>
     </form>
 </div>

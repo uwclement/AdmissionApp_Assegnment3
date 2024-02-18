@@ -53,4 +53,13 @@
     <url-pattern>/*</url-pattern>
   </filter-mapping>
 
+  <servlet>
+    <servlet-name>SendEmailServlet</servlet-name>
+    <servlet-class>SendEmailServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>SendEmailServlet</servlet-name>
+    <url-pattern>/SendEmailServlet</url-pattern>
+  </servlet-mapping>
+
 </web-app>
