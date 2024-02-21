@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <title>Login V1</title>
+    <title>Login</title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" type="text/css" href="css/style.css">
@@ -20,7 +20,8 @@
 					<span class="login100-form-title">Member Login</span>
 
                 <div class="wrap-input100 validate-input" data-validate = "Valid email is required: ex@abc.xyz" >
-                    <input class="input100" type="text" name="email" placeholder="Email" aria-required="true" required>
+                    <input class="input100" type="text" name="email" value="<%=request.getParameter("email")%>" placeholder="Email" aria-required="true" required>
+
                     <span class="focus-input100"></span>
                     <span class="symbol-input100">
 							<i class="fa fa-envelope" aria-hidden="true"></i>
@@ -28,7 +29,8 @@
                 </div>
 
                 <div class="wrap-input100 validate-input" data-validate = "Password is required">
-                    <input class="input100" type="password" name="password" placeholder="Password" required>
+                    <input class="input100" type="password" name="password" value= "<%=request.getParameter("passwd")%>"placeholder="Password" required>
+
                     <span class="focus-input100"></span>
                     <span class="symbol-input100">
 							<i class="fa fa-lock" aria-hidden="true"></i>

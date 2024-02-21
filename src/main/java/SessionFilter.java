@@ -16,12 +16,15 @@ public class SessionFilter implements Filter {
         String requestURI = httpRequest.getRequestURI();
         boolean loggedIn = session != null && session.getAttribute("user") != null ;
         boolean loginRequest = requestURI.endsWith("Login.jsp") || requestURI.endsWith("LoginServlet");
+        boolean signupRequest = requestURI.endsWith("signup.jsp") || requestURI.endsWith("SignupServlet");
 
-        if (loggedIn || loginRequest) {
+        if (loggedIn || loginRequest || signupRequest) {
             chain.doFilter(servletRequest, servletResponse);
         } else {
             httpResponse.sendRedirect(httpRequest.getContextPath() + "/Login.jsp");
         }
     }
-    }
+
+}
+
 

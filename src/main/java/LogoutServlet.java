@@ -10,10 +10,12 @@ public class LogoutServlet extends HttpServlet {
 
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         HttpSession session = request.getSession(false);
+        String userID = (String) session.getAttribute("email");
         if (session != null) {
             session.invalidate(); // Invalidate the session
         }
         // Redirect to the login page
         response.sendRedirect("Login.jsp");
+        ConfEmail.sendEmail(userID, "Logout Notification", "You have successfully logged out.");
     }
 }

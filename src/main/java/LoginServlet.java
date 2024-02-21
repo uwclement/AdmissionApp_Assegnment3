@@ -13,26 +13,31 @@ import static java.lang.System.out;
     @WebServlet("/LoginServlet")
 public class LoginServlet extends HttpServlet {
     private static final long serialVersionUID = 1L;
-    private final String userID = "admin";
-    private final String password = "12345";
+
+
 
     protected void doGet(HttpServletRequest request,
                           HttpServletResponse response) throws ServletException, IOException {
+
+        HttpSession session = request.getSession();
+              String name = (String) session.getAttribute("user");
+                String userID = (String) session.getAttribute("email");
+                String password = (String) session.getAttribute("passwd");
 
         // get request parameters for userID and password
         String user = request.getParameter("email");
         String pwd = request.getParameter("password");
 
         if(userID.equals(user) && password.equals(pwd)){
-            HttpSession session = request.getSession();
             Cookie loginCookie = new Cookie("user",user);
             //setting cookie to expiry in 30 mins
             loginCookie.setMaxAge(30*60);
             response.addCookie(loginCookie);
             session.setAttribute("user", user);
-            response.sendRedirect("form.jsp?user="+user);
+            response.sendRedirect("form.jsp?user="+name);
 
             out.println("<script>alert('Valid Email & Passwd');</script>");
+            ConfEmail.sendEmail(userID, "Login Notification", "You have successfully logged in.");
 
         }else{
             response.sendRedirect("Login.jsp");

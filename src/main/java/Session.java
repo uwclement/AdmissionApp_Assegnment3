@@ -1,44 +1,35 @@
-import jakarta.servlet.ServletException;
-import jakarta.servlet.annotation.WebServlet;
-import jakarta.servlet.http.HttpServlet;
-import jakarta.servlet.http.HttpServletRequest;
-import jakarta.servlet.http.HttpServletResponse;
+public class Session {
+    private String name;
+    private String email;
+    private String password;
 
-import java.io.IOException;
-import java.io.PrintWriter;
-import java.util.HashMap;
-
-@WebServlet("/Session")
-public class Session extends HttpServlet {
-
-    protected void doGet (HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-
-        // TODO Auto-generated method stub
-        PrintWriter out = response.getWriter();
-        out.println("<h1>Welcome to the Servlet.");
-        // This will print output on console
-        System.out.println("GFGServlet is running");
-
+    // Getter method for name
+    public String getName() {
+        return name;
     }
 
+    // Setter method for name
+    public void setName(String name) {
+        this.name = name;
+    }
 
-//    protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-//
-//        String email = request.getParameter("email");
-//        String password = request.getParameter("password");
-//
-//        HashMap<String, String> userDetails = new HashMap<String, String>();
-//        userDetails.put("email", email);
-//        userDetails.put("password", password);
-//
-//        // Creating a Session object and storing
-//        // HashMap into it
-//        HttpSession session = request.getSession();
-//        session.setAttribute("user", userDetails);
-//        // forwarding request to confirm.jsp page
-//        RequestDispatcher dispatcher = request.getRequestDispatcher("/Session.java");
-//        dispatcher.forward(request, response);
-//
-//    }
+    // Getter method for email
+    public String getEmail() {
+        return email;
+    }
 
+    // Setter method for email
+    public void setEmail(String email) {
+        this.email = email;
+    }
+
+    // Getter method for password
+    public String getPassword() {
+        return password;
+    }
+
+    // Setter method for password
+    public void setPassword(String password) {
+        this.password = password;
+    }
 }
