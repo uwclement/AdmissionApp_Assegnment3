@@ -22,8 +22,7 @@
 <div class="container">
     <div class="header2"><img src="images/view2.png" alt=""> <%=request.getParameter("user")%></div>
     <div class="header1">Registration Form</div>
-    <form action="#">
-<%--        <div class="form first">--%>
+    <form action="Controller.SubmissionServlet" method="post">
         <div class="form first">
             <div class="details address">
                 <span class="title">Details</span>
@@ -31,11 +30,11 @@
                 <div class="fields">
                     <div class="input-field">
                         <label>Student ID</label>
-                        <input type="number" placeholder=" Enter Student ID" required>
+                        <input type="number" name="studentID" placeholder=" Enter Student ID" required>
                     </div>
                     <div class="input-field">
                         <label>Full Name</label>
-                        <input type="text" placeholder="Enter Full Name" required>
+                        <input type="text" name="fullName" placeholder="Enter Full Name" required>
                     </div>
 
                     <div class="input-field">
@@ -50,7 +49,7 @@
 
                     <div class="input-field">
                         <label>Phone Number</label>
-                        <input type="number" placeholder="Enter Phone number" required>
+                        <input type="number" value="phoneNumber" placeholder="Enter Phone number" required>
                     </div>
 
                     <div class="input-field">
@@ -66,7 +65,7 @@
 
                     <div class="input-field">
                         <label>Course</label>
-                        <input type="Text" placeholder=" Enter Course" required>
+                        <input type="Text" value="course" placeholder=" Enter Course" required>
                     </div>
                 </div>
 
@@ -76,16 +75,16 @@
                 <!-- Other form fields -->
                 <div class="input-field">
                 <label>Passport</label>
-                <input type="file" name="passport_picture" accept=".jpg, .png" >
+                <input type="file" name="passport_picture" accept=".jpg, .png" required>
                 </div>
                 <div class="input-field">
                 <label>Certificate</label>
-                <input type="file" name="certificate" accept=".pdf" placeholder="Certificate">
+                <input type="file" name="certificate" accept=".pdf" placeholder="Certificate" required>
                 </div>
 
                 <div class="buttons">
-                    <button class="sumbit">
-                        <span class="btnText">Submit</span>
+                    <button class="sumbit" type="submit">
+                        <span class="btnText" >Submit</span>
                         <i class="uil uil-navigator"></i>
                     </button>
                 </div>

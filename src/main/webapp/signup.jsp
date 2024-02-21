@@ -3,7 +3,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <title>Login V1</title>
+    <title>Signup</title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" type="text/css" href="css/style.css">
@@ -18,11 +18,11 @@
                 <img src="images/sigup.png" alt="IMG">
             </div>
 
-            <form class="login100-form validate-form" method="post" action="session" >
+            <form class="login100-form validate-form" method="post" action="Controller.SignupServlet" >
 					<span class="register100-form-title">Member Register</span>
 
                 <div class="wrap-input100 validate-input" data-validate = "Valid name is required">
-                    <input class="input100" type="text" name="email" placeholder="FullName">
+                    <input class="input100" type="text" name="name" placeholder="FullName">
                     <span class="focus-input100"></span>
                     <span class="symbol-input100">
 							<i class="fa fa-envelope" aria-hidden="true"></i>
@@ -37,7 +37,7 @@
                 </div>
 
                 <div class="wrap-input100 validate-input" data-validate = "Valid Phone is required">
-                    <input class="input100" type="number" name="email" placeholder="+250">
+                    <input class="input100" type="number" name="phone" placeholder="+250">
                     <span class="focus-input100"></span>
                     <span class="symbol-input100">
 							<i class="fa fa-envelope" aria-hidden="true"></i>
@@ -45,7 +45,7 @@
                 </div>
 
                 <div class="wrap-input100 validate-input" data-validate = "Password is required">
-                    <input class="input100" type="password" name="pass" placeholder="Password">
+                    <input class="input100" type="password" name="passwd" placeholder="Password">
                     <span class="focus-input100"></span>
                     <span class="symbol-input100">
 							<i class="fa fa-lock" aria-hidden="true"></i>

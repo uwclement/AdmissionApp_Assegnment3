@@ -8,40 +8,39 @@
 
 
   <servlet>
-    <servlet-name>LoginServlet</servlet-name>
-    <servlet-class>LoginServlet</servlet-class>
+    <servlet-name>Controller.LoginServlet</servlet-name>
+    <servlet-class>Controller.LoginServlet</servlet-class>
   </servlet>
   <servlet-mapping>
-    <servlet-name>LoginServlet</servlet-name>
-    <url-pattern>/LoginServlet</url-pattern>
+    <servlet-name>Controller.LoginServlet</servlet-name>
+    <url-pattern>/Controller.LoginServlet</url-pattern>
   </servlet-mapping>
 
   <servlet>
-    <servlet-name>Session</servlet-name>
-    <servlet-class>Session</servlet-class>
+    <servlet-name>Controller.SignupServlet</servlet-name>
+    <servlet-class>Controller.SignupServlet</servlet-class>
   </servlet>
   <servlet-mapping>
-    <servlet-name>Session</servlet-name>
-    <url-pattern>/session</url-pattern>
+    <servlet-name>Controller.SignupServlet</servlet-name>
+    <url-pattern>/Controller.SignupServlet</url-pattern>
   </servlet-mapping>
 
   <servlet>
-    <servlet-name>LogoutServlet</servlet-name>
-    <servlet-class>LogoutServlet</servlet-class>
+    <servlet-name>Controller.LogoutServlet</servlet-name>
+    <servlet-class>Controller.LogoutServlet</servlet-class>
   </servlet>
   <servlet-mapping>
-    <servlet-name>LogoutServlet</servlet-name>
-    <url-pattern>/LogoutServlet</url-pattern>
+    <servlet-name>Controller.LogoutServlet</servlet-name>
+    <url-pattern>/Controller.LogoutServlet</url-pattern>
   </servlet-mapping>
 
   <welcome-file-list>
     <welcome-file>Login.jsp</welcome-file>
-    <welcome-file>Signup.jsp</welcome-file>
   </welcome-file-list>
 
   <filter>
-    <filter-name>SessionFilter</filter-name>
-    <filter-class>SessionFilter</filter-class>
+    <filter-name>Controller.SessionFilter</filter-name>
+    <filter-class>Controller.SessionFilter</filter-class>
     <init-param>
       <param-name>paramName</param-name>
       <param-value>paramValue</param-value>
@@ -49,17 +48,26 @@
   </filter>
 
   <filter-mapping>
-    <filter-name>SessionFilter</filter-name>
+    <filter-name>Controller.SessionFilter</filter-name>
     <url-pattern>/*</url-pattern>
   </filter-mapping>
 
   <servlet>
-    <servlet-name>SendEmailServlet</servlet-name>
-    <servlet-class>SendEmailServlet</servlet-class>
+    <servlet-name>Controller.SendEmailServlet</servlet-name>
+    <servlet-class>Controller.SendEmailServlet</servlet-class>
   </servlet>
   <servlet-mapping>
-    <servlet-name>SendEmailServlet</servlet-name>
-    <url-pattern>/SendEmailServlet</url-pattern>
+    <servlet-name>Controller.SendEmailServlet</servlet-name>
+    <url-pattern>/Controller.SendEmailServlet</url-pattern>
+  </servlet-mapping>
+
+  <servlet>
+    <servlet-name>Controller.SubmissionServlet</servlet-name>
+    <servlet-class>Controller.SubmissionServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>Controller.SubmissionServlet</servlet-name>
+    <url-pattern>/Controller.SubmissionServlet</url-pattern>
   </servlet-mapping>
 
 </web-app>

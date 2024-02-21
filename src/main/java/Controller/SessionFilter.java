@@ -1,3 +1,5 @@
+package Controller;
+
 import jakarta.servlet.*;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
@@ -15,13 +17,16 @@ public class SessionFilter implements Filter {
 
         String requestURI = httpRequest.getRequestURI();
         boolean loggedIn = session != null && session.getAttribute("user") != null ;
-        boolean loginRequest = requestURI.endsWith("Login.jsp") || requestURI.endsWith("LoginServlet");
+//        boolean signupRequest = requestURI.endsWith("signup.jsp") || requestURI.endsWith("Controller.SignupServlet");
+        boolean loginRequest = requestURI.endsWith("Login.jsp") || requestURI.endsWith("Controller.LoginServlet");
 
-        if (loggedIn || loginRequest) {
+        if (loggedIn || loginRequest ) {
             chain.doFilter(servletRequest, servletResponse);
         } else {
             httpResponse.sendRedirect(httpRequest.getContextPath() + "/Login.jsp");
         }
     }
-    }
+
+}
+
 
