@@ -6,7 +6,7 @@ import java.sql.*;
 public class AccountDao {
 
     public boolean validate(User user) throws SQLException {
-        boolean status = false;
+        boolean result = false;
          DBconnection con = new DBconnection();
         try {
             Class.forName("org.postgresql.Driver");
@@ -23,13 +23,13 @@ public class AccountDao {
 
             System.out.println(pst);
             ResultSet rs = pst.executeQuery();
-            status = rs.next();
+            result = rs.next();
          }catch (SQLException ex){
              printSQLException(ex);
          }
 
 
-      return status;
+      return result;
 
     }
 

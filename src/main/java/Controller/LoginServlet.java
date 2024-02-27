@@ -1,6 +1,7 @@
 package Controller;
 
 import DAO.AccountDao;
+import DAO.RegistrationDao;
 import Model.User;
 import jakarta.servlet.ServletException;
 import jakarta.servlet.annotation.WebServlet;
@@ -47,13 +48,31 @@ public class LoginServlet extends HttpServlet {
             session.setAttribute("email", user.getEmail());
             session.setAttribute("password", user.getPassword());
             session.setAttribute("user", user.getName());
-//            session.setAttribute("user", user.getName());
-//            response.sendRedirect("form.jsp?user=" + email);
+            session.setAttribute("accountdao",accountDao);
+            response.sendRedirect("form.jsp?user=" + email);
 
             out.println("<script>alert('Valid Email & Passwd');</script>");
             ConfEmail.sendEmail(email, "Login Notification", "You have successfully logged in.");
-            response.sendRedirect("form.jsp?user=" + email);
-        } else {
+        }
+//        else if (email.equals("admin@gmail.com") && pass.equals("admin12345")) {
+//                HttpSession session = request.getSession();
+//            RegistrationDao registration = new RegistrationDao();
+//                Cookie loginCookie = new Cookie("user", email);
+//                // setting cookie to expiry in 30 mins
+//                loginCookie.setMaxAge(30 * 60);
+//                response.addCookie(loginCookie);
+//
+//                // Use getter methods to get values
+//                session.setAttribute("email", user.getEmail());
+//                session.setAttribute("password", user.getPassword());
+//                session.setAttribute("user", user.getName());
+//                session.setAttribute("registration",registration);
+//                response.sendRedirect("AdminPage.jsp?user=" + email);
+//
+//                out.println("<script>alert('Valid Email & Passwd');</script>");
+//                ConfEmail.sendEmail(email, "Login Notification", "You have successfully logged in.");
+//            }
+        else {
             response.sendRedirect("Login.jsp");
             out.println("<font color=red>Either user name or password is wrong.</font>");
             out.println("<script>alert('Invalid Username');</script>");

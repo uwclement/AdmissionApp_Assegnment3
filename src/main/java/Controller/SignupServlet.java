@@ -33,7 +33,6 @@ public class SignupServlet extends HttpServlet {
         if (accountDao.Register(user)!=null) {
 
             response.sendRedirect("Login.jsp?email=" + user.getEmail() + "&passwd=" + user.getPassword() + "&user=" + user.getName());
-            // Note: It's a good practice to avoid using out.println for script alerts, consider using JavaScript in JSP.
             out.println("<script>alert('User Created');</script>");
 
         } else {
